@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greeting Card</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .front-cover {
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .inside-message {
+    padding: 20px;
+  }
+
+  .btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="front-cover">
+      <h2>Happy Birthday!</h2>
+      <p>Wishing you a day filled with love and joy.</p>
+    </div>
+    <div class="inside-message" style="display: none;">
+      <p>May this year bring you success and happiness.</p>
+      <p>Best wishes,</p>
+      <p>Your Name</p>
+    </div>
+    <button class="btn" onclick="showMessage()">Open</button>
+  </div>
+
+  <script>
+    function showMessage() {
+      var message = document.querySelector('.inside-message');
+      message.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Red Rose</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+  }
+
+  .rose-container {
+    position: relative;
+  }
+
+  .rose {
+    width: 100px;
+    height: 100px;
+    background-color: #ff0000;
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bloom 1s forwards;
+  }
+
+  .leaf {
+    width: 30px;
+    height: 80px;
+    background-color: #228b22;
+    transform-origin: bottom right;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(40deg);
+  }
+
+  .leaf:nth-child(2) {
+    transform: translateX(-50%) rotate(140deg);
+  }
+
+  .leaf:nth-child(3) {
+    transform: translateX(-50%) rotate(260deg);
+  }
+
+  .leaf:nth-child(4) {
+    transform: translateX(-50%) rotate(40deg) scaleX(-1);
+  }
+
+  .leaf:nth-child(5) {
+    transform: translateX(-50%) rotate(140deg) scaleX(-1);
+  }
+
+  .leaf:nth-child(6) {
+    transform: translateX(-50%) rotate(260deg) scaleX(-1);
+  }
+
+  .petal {
+    width: 25px;
+    height: 50px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  .petal:nth-child(2) {
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .petal:nth-child(3) {
+    transform: translateX(-50%) rotate(135deg);
+  }
+
+  .petal:nth-child(4) {
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  .petal:nth-child(5) {
+    transform: translateX(-50%) rotate(225deg);
+  }
+
+  .petal:nth-child(6) {
+    transform: translateX(-50%) rotate(270deg);
+  }
+
+  .petal:nth-child(7) {
+    transform: translateX(-50%) rotate(315deg);
+  }
+
+  .petal:nth-child(8) {
+    transform: translateX(-50%) rotate(360deg);
+  }
+
+  @keyframes bloom {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .signature {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <div class="rose-container">
+    <div class="rose">
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+    </div>
+  </div>
+  <div class="signature">
+    Created by ChatGPT
+  </div>
+</body>
+</html>
